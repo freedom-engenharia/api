@@ -13,7 +13,7 @@ namespace AutomacaoFreedom.Repositorios
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //string de conexão banco local
-            optionsBuilder.UseSqlServer("Server=DESKTOP-DOAVL5R;Database=AutomacaoFreedom;Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-680NKVQ;Database=AutomacaoFreedom;Trusted_Connection=true;");
         }
 
         public AutomacaoFreedomContexto(DbContextOptions<AutomacaoFreedomContexto> options)

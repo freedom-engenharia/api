@@ -12,17 +12,17 @@ C:\Users\carlo\Documents\GitHub\freedom\Desenvolvimento Api\FreedomApi\FreedomAp
 C:\Users\carlo\Documents\GitHub\freedom\Desenvolvimento Api\FreedomApi\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
 C:\Users\carlo\Documents\GitHub\freedom\Desenvolvimento Api\FreedomApi\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.dll
 C:\Users\carlo\Documents\GitHub\freedom\Desenvolvimento Api\FreedomApi\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.csproj.CoreCompileInputs.cache
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorAssemblyInfo.cache
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorAssemblyInfo.cs
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.AssemblyInfoInputs.cache
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.AssemblyInfo.cs
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.deps.json
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.runtimeconfig.json
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.runtimeconfig.dev.json
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.dll
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorTargetAssemblyInfo.cache
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.dll
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
-C:\Users\carlo\Documents\GitHub\Freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.csprojAssemblyReference.cache
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.deps.json
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.runtimeconfig.json
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.runtimeconfig.dev.json
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.dll
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\bin\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorAssemblyInfo.cache
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorAssemblyInfo.cs
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.AssemblyInfoInputs.cache
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.AssemblyInfo.cs
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.RazorTargetAssemblyInfo.cache
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.dll
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.pdb
+C:\Users\carlo\Documents\GitHub\freedom\api\FreedomApi\obj\Debug\netcoreapp2.1\AutomacaoFreedomApi.csprojAssemblyReference.cache

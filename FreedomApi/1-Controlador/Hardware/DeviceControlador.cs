@@ -15,28 +15,11 @@ namespace AutomacaoFreedomApi.Controlador.Hardware
 
         private readonly IHardwareAplicacao _hardwareAplicacao;
         private readonly IAutomacaoFreedomUnitOfWork _automacaoFreedomUnitOfWork;
-        private readonly IMqttServico _mqttServico;
 
-        public DeviceControlador(IMqttServico mqttServico, IHardwareAplicacao hardwareAplicacao, IAutomacaoFreedomUnitOfWork automacaoFreedomUnitOfWork)
+        public DeviceControlador(IHardwareAplicacao hardwareAplicacao, IAutomacaoFreedomUnitOfWork automacaoFreedomUnitOfWork)
         {
             _hardwareAplicacao = hardwareAplicacao;
             _automacaoFreedomUnitOfWork = automacaoFreedomUnitOfWork;
-            _mqttServico = mqttServico;
-
-        }
-
-        [HttpGet("MQTTLIGALED", Name = "MQTTLIGALED")]
-        public IActionResult MQTTLIGALED()
-        {
-            _mqttServico.Publish("FREEDOMLED01", 1);
-            return Ok("lIGADO VIA MQTT");
-        }
-
-        [HttpGet("MQTTDESLOGALED", Name = "MQTTDESLOGALED")]
-        public IActionResult MQTTDESLOGALED()
-        {
-            _mqttServico.Publish("FREEDOMLED01", 0);
-            return Ok("DESLIGADO VIA MQTT");
         }
 
         [HttpGet(Name = "GetDevices")]

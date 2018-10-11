@@ -18,7 +18,7 @@ namespace AutomacaoFreedomApi.Servico.Hardware.Concreta
 
         public MqttServico(string servidor)
         {
-            _server = "test.mosquitto.org"; 
+            _server = "broker.hivemq.com"; 
             _client = new MqttClient(_server);
             _qosLevels = new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE };
         }

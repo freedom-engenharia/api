@@ -13,9 +13,6 @@ namespace AutomacaoFreedomApi.Aplicacao.Interface
         DeviceCriacaoDto AddDevice(DeviceCriacaoDto device);
         void UpdateDevice(DeviceAtualizacaoDto device);
         void DeleteDevice(DeviceDto device);
-        string LigarDevice(string iP);
-        string DesligarDevice(string iP);
-        string AtualuAtualizarStatusDevice(string iP, int status, string dataModificacao);
 
         #endregion
     }

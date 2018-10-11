@@ -13,9 +13,6 @@ namespace AutomacaoFreedomApi.Servico.Hardware.Interface
         DeviceCriacaoDto Add(DeviceCriacaoDto device);
         void Update(DeviceAtualizacaoDto device);
         void Delete(DeviceDto device);
-        string LigarDevice(string iP);
-        string DesligarDevice(string iP);
-        DeviceDto GetByIP(string IP);
 
     }
 }

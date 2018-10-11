@@ -37,53 +37,6 @@ namespace AutomacaoFreedomApi.Aplicacao.Concreta
         public void DeleteDevice(DeviceDto device) =>
             _deviceServico.Delete(device);
 
-        public string LigarDevice(string iP) =>
-            _deviceServico.LigarDevice(iP);
-
-        public string DesligarDevice(string iP) =>
-           _deviceServico.DesligarDevice(iP);
-
-        public string AtualuAtualizarStatusDevice(string iP, int status, string dataModificacao)
-        {
-            DateTime data = stringConfiguracao.converteStringEmDataTime(dataModificacao);
-
-            var device = _deviceServico.GetByIP(iP);
-
-            if (device.DataModificacao > data)
-            {
-                if (status == 1 && device.Status == Infraestrutura.Enum.DeviceStatus.LIGADO ||
-                    status == 0 && device.Status == Infraestrutura.Enum.DeviceStatus.DESLIGADO)
-                {
-                    return "Dispositivo já esta atualizado";
-                }
-                if (status == 1 && device.Status == Infraestrutura.Enum.DeviceStatus.DESLIGADO)
-                {
-                    DesligarDevice(iP);
-                    return "Dispositivo atualizado (Desligado)";
-                }
-                if (status == 0 && device.Status == Infraestrutura.Enum.DeviceStatus.LIGADO)
-                {
-                    LigarDevice(iP);
-                    return "Dispositivo atualizado (Ligado)";
-                }
-
-            }
-            else if (device.DataModificacao < data)
-            {
-                if (status == 1)
-                {
-                    device.Status = Infraestrutura.Enum.DeviceStatus.LIGADO;
-                    return "BD atualizado, disposito ligado";
-                }
-                else
-                {
-                    device.Status = Infraestrutura.Enum.DeviceStatus.DESLIGADO;
-                    return "BD atualizado, disposito desligado";
-                }
-            }
-            return "ok";
-        }
-
         #endregion
     }
 }

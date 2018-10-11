@@ -25,20 +25,6 @@ namespace AutomacaoFreedomApi.Controlador.Hardware
 
         }
 
-        [HttpGet("MQTTLIGALED", Name = "MQTTLIGALED")]
-        public IActionResult MQTTLIGALED()
-        {
-            _mqttServico.Publish("FREEDOMLED01", 1);
-            return Ok("lIGADO VIA MQTT");
-        }
-
-        [HttpGet("MQTTDESLOGALED", Name = "MQTTDESLOGALED")]
-        public IActionResult MQTTDESLOGALED()
-        {
-            _mqttServico.Publish("FREEDOMLED01", 0);
-            return Ok("DESLIGADO VIA MQTT");
-        }
-
         [HttpGet(Name = "GetDevices")]
         public IActionResult GetDevices()
         {
@@ -77,31 +63,6 @@ namespace AutomacaoFreedomApi.Controlador.Hardware
             _hardwareAplicacao.DeleteDevice(device);
             _automacaoFreedomUnitOfWork.Save();
             return NoContent();
-        }
-
-        [HttpGet("LigarDevice/{iP}", Name = "LigarDevice")]
-        public IActionResult LigarDevice(string iP)
-        {
-            var resposta = _hardwareAplicacao.LigarDevice(iP);
-            _automacaoFreedomUnitOfWork.Save();
-            return Ok(resposta);
-        }
-
-        [HttpGet("DesligarDevice/{iP}", Name = "DesligarDevice")]
-        public IActionResult DesligarDevice(string iP)
-        {
-            var resposta = _hardwareAplicacao.DesligarDevice(iP);
-            _automacaoFreedomUnitOfWork.Save();
-            return Ok(resposta);
-        }
-
-        [HttpGet("AtualizaStatus/{iP}/{status}/{DataModificacao}", Name = "AtualizarStatusDevice")]
-        public IActionResult AtualizarStatusDevice(string iP, int status, string dataModificacao)
-        {
-            var resposta = _hardwareAplicacao.AtualuAtualizarStatusDevice(iP, status, dataModificacao);
-
-            _automacaoFreedomUnitOfWork.Save();
-            return Ok(resposta);
         }
 
     }

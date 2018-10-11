@@ -23,7 +23,5 @@ namespace AutomacaoFreedomApi.Repositorio.Hardware.Concreta
             return devices;
         }
 
-        public Device GetByIP(string IP) =>
-            _contexto.Device.Where(x => x.IP == IP).First();
     }
 }

@@ -54,38 +54,6 @@ namespace AutomacaoFreedomApi.Servico.Hardware.Concreta
         public void Delete(DeviceDto Device) =>
            _repositorio.Delete(Mapper.Map<Device>(Device));
 
-        public DeviceDto GetByIP(string iP) =>
-           Mapper.Map<DeviceDto>(_repositorio.GetByIP(iP));
-
-        public string LigarDevice(string iP) {
-            var device = _repositorio.GetByIP(iP);
-
-            device.DataModificacao = DateTime.Now;
-
-            device.Status = Infraestrutura.Enum.DeviceStatus.LIGADO;
-
-            _repositorio.Update(device);
-
-             var resposta = _httpClient.GetStringAsync("http://"+ iP +"/" + DateTime.Now +"/on").Result;
-
-            return resposta;
-        }
-
-        public  string DesligarDevice(string iP)
-        {
-            var device = _repositorio.GetByIP(iP);
-
-            device.DataModificacao = DateTime.Now;
-
-            device.Status = Infraestrutura.Enum.DeviceStatus.DESLIGADO;
-
-            _repositorio.Update(device);
-
-            var resposta = _httpClient.GetStringAsync("http://" + iP + "/" + DateTime.Now + "/off").Result;
-
-            return resposta;
-
-        }
 
     }
 }

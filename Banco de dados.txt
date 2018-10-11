@@ -3,11 +3,19 @@
 na raiz do projeto:
 
 	dotnet ef migrations add InitialCreate
-<<<<<<< HEAD
-=======
+
 
 comentar Database.Migrate();
-depois;   dotnet ef database update
+depois:   dotnet ef database update
 
 descomentar  Database.Migrate();
->>>>>>> master
+
+
+2. Atualizando banco de dados:
+
+comente Database.Migrate();
+  
+dotnet ef migrations add nomedoNovoMigrate
+dotnet ef database update
+
+descomente o Database.Migrate();

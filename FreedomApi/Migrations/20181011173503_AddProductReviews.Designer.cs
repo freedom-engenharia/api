@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutomacaoFreedomApi.Migrations
 {
     [DbContext(typeof(AutomacaoFreedomContexto))]
-    [Migration("20180904002457_addIpEmDevice")]
-    partial class addIpEmDevice
+    [Migration("20181011173503_AddProductReviews")]
+    partial class AddProductReviews
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.0-rtm-30799")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

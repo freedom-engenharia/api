@@ -18,7 +18,7 @@ namespace AutomacaoFreedomApi.Servico.Hardware.Concreta
 
         public MqttServico(string servidor)
         {
-            _server = "iot.eclipse.org"; 
+            _server = "test.mosquitto.org"; 
             _client = new MqttClient(_server);
             _qosLevels = new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE };
         }

@@ -3,3 +3,11 @@
 na raiz do projeto:
 
 	dotnet ef migrations add InitialCreate
+<<<<<<< HEAD
+=======
+
+comentar Database.Migrate();
+depois;   dotnet ef database update
+
+descomentar  Database.Migrate();
+>>>>>>> master

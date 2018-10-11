@@ -3,7 +3,6 @@ using AutomacaoFreedom.Repositorios;
 using AutomacaoFreedomApi.Aplicacao.Concreta;
 using AutomacaoFreedomApi.Aplicacao.Interface;
 using AutomacaoFreedomApi.Infraestrutura;
-using AutomacaoFreedomApi.Infraestrutura.mqtt.Rum;
 using AutomacaoFreedomApi.Repositorio;
 using AutomacaoFreedomApi.Repositorio.Hardware.Concreta;
 using AutomacaoFreedomApi.Repositorio.Tipologia.Concreta;
@@ -26,8 +25,7 @@ namespace AutomacaoFreedomApi
 {
     public class Startup
     {
-
-        public Startup(IConfiguration configuration )
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -37,8 +35,9 @@ namespace AutomacaoFreedomApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            MqttRun.Inicializar();
+            services.AddScoped<IMqttServico>(factory => {
+                return new MqttServico("");
+            });
 
             //Tipologia
             services.AddScoped<ITipologiaAplicacao, TipologiaAplicacao>();
@@ -103,5 +102,4 @@ namespace AutomacaoFreedomApi
            
         }
     }
-
 }

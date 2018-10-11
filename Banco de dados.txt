@@ -1,0 +1,5 @@
+1.Gerando banco de dados:
+
+na raiz do projeto:
+
+	dotnet ef migrations add InitialCreate

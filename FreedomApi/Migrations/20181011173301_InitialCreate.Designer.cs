@@ -10,18 +10,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutomacaoFreedomApi.Migrations
 {
     [DbContext(typeof(AutomacaoFreedomContexto))]
-    [Migration("20180902233500_CorrecaoNomeDevice")]
-    partial class CorrecaoNomeDevice
+    [Migration("20181011173301_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.0-rtm-30799")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.Empresa", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.Empresa", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -49,7 +49,7 @@ namespace AutomacaoFreedomApi.Migrations
                     b.ToTable("Empresa","Tipologia");
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.Local", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.Local", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -81,7 +81,7 @@ namespace AutomacaoFreedomApi.Migrations
                     b.ToTable("Local","Tipologia");
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.SubLocal", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.SubLocal", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -114,7 +114,7 @@ namespace AutomacaoFreedomApi.Migrations
                     b.ToTable("SubLocal","Tipologia");
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.Unidade", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.Unidade", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -146,7 +146,7 @@ namespace AutomacaoFreedomApi.Migrations
                     b.ToTable("Unidade","Tipologia");
                 });
 
-            modelBuilder.Entity("AutomacaoFreedomApi.Entidades.Hardware.Device", b =>
+            modelBuilder.Entity("AutomacaoFreedomApi.Entidade.Hardware.Device", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -160,6 +160,10 @@ namespace AutomacaoFreedomApi.Migrations
                     b.Property<DateTime>("DataCriacao");
 
                     b.Property<DateTime>("DataModificacao");
+
+                    b.Property<string>("IP");
+
+                    b.Property<string>("Mac");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -178,33 +182,33 @@ namespace AutomacaoFreedomApi.Migrations
                     b.ToTable("Device","Hardware");
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.Local", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.Local", b =>
                 {
-                    b.HasOne("AutomacaoFreedom.Entidades.Tipologia.Unidade", "Unidade")
+                    b.HasOne("AutomacaoFreedom.Entidade.Tipologia.Unidade", "Unidade")
                         .WithMany("Locais")
                         .HasForeignKey("UnidadeId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.SubLocal", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.SubLocal", b =>
                 {
-                    b.HasOne("AutomacaoFreedom.Entidades.Tipologia.Local", "Local")
+                    b.HasOne("AutomacaoFreedom.Entidade.Tipologia.Local", "Local")
                         .WithMany("SubLocais")
                         .HasForeignKey("LocalId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("AutomacaoFreedom.Entidades.Tipologia.Unidade", b =>
+            modelBuilder.Entity("AutomacaoFreedom.Entidade.Tipologia.Unidade", b =>
                 {
-                    b.HasOne("AutomacaoFreedom.Entidades.Tipologia.Empresa", "Empresa")
+                    b.HasOne("AutomacaoFreedom.Entidade.Tipologia.Empresa", "Empresa")
                         .WithMany("Unidades")
                         .HasForeignKey("EmpresaId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("AutomacaoFreedomApi.Entidades.Hardware.Device", b =>
+            modelBuilder.Entity("AutomacaoFreedomApi.Entidade.Hardware.Device", b =>
                 {
-                    b.HasOne("AutomacaoFreedom.Entidades.Tipologia.SubLocal", "SubLocal")
+                    b.HasOne("AutomacaoFreedom.Entidade.Tipologia.SubLocal", "SubLocal")
                         .WithMany("Devices")
                         .HasForeignKey("SubLocalId")
                         .OnDelete(DeleteBehavior.Restrict);

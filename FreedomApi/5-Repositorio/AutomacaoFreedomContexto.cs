@@ -19,7 +19,7 @@ namespace AutomacaoFreedom.Repositorios
         public AutomacaoFreedomContexto(DbContextOptions<AutomacaoFreedomContexto> options)
            : base(options)
         {
-            Database.Migrate();
+           Database.Migrate();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

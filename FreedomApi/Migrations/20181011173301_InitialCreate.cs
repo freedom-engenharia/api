@@ -106,7 +106,7 @@ namespace AutomacaoFreedomApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Divece",
+                name: "Device",
                 schema: "Hardware",
                 columns: table => new
                 {
@@ -115,14 +115,16 @@ namespace AutomacaoFreedomApi.Migrations
                     DataModificacao = table.Column<DateTime>(nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Codigo = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    IP = table.Column<string>(nullable: true),
+                    Mac = table.Column<string>(nullable: true),
                     Status = table.Column<int>(nullable: false),
                     SubLocalId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Divece", x => x.Id);
+                    table.PrimaryKey("PK_Device", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Divece_SubLocal_SubLocalId",
+                        name: "FK_Device_SubLocal_SubLocalId",
                         column: x => x.SubLocalId,
                         principalSchema: "Tipologia",
                         principalTable: "SubLocal",
@@ -131,9 +133,9 @@ namespace AutomacaoFreedomApi.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Divece_SubLocalId",
+                name: "IX_Device_SubLocalId",
                 schema: "Hardware",
-                table: "Divece",
+                table: "Device",
                 column: "SubLocalId");
 
             migrationBuilder.CreateIndex(
@@ -158,7 +160,7 @@ namespace AutomacaoFreedomApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Divece",
+                name: "Device",
                 schema: "Hardware");
 
             migrationBuilder.DropTable(
